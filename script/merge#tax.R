@@ -11,8 +11,10 @@ seqtab <- removeBimeraDenovo(st1, method="consensus", multithread=TRUE)
 # Assign taxonomy
 tax <- assignTaxonomy(seqtab, "/Users/nathanma/Documents/PHDLife/mike_proj/database/silva_nr99_v138.1_train_set.fa", multithread=TRUE)
 
-taxa<- assignTaxonomy(seqtab.nochim, "/Users/nathanma/Documents/PHDLife/mike_proj/database/silva_nr99_v138.1_train_set.fa", multithread=TRUE)
+taxa <- assignTaxonomy(seqtab.nochim, "/Users/nathanma/Documents/PHDLife/mike_proj/database/silva_nr99_v138.1_train_set.fa", multithread=TRUE)
 taxa <- addSpecies(taxa, "/Users/nathanma/Documents/PHDLife/mike_proj/database/silva_species_assignment_v138.1.fa")
 # Write to disk
 saveRDS(seqtab, "/Users/nathanma/Documents/PHDLife/mike_proj/out/seqtab_final.rds") #sequence table saved
 saveRDS(tax, "/Users/nathanma/Documents/PHDLife/mike_proj/out/tax_final.rds")
+
+write.csv(tax,file="/Users/nathanma/Documents/PHDLife/mike_proj/out/test_protcal/taxa.CSV",append = FALSE, quote = FALSE , sep = " ",eol = "\n", na = "NA", dec = ".", row.names = TRUE,col.names = TRUE, qmethod = c("escape", "double"),fileEncoding = "")
