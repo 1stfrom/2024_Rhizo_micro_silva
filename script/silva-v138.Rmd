@@ -1,0 +1,470 @@
+---
+title: "Prepare Silva v138 SSU taxonomy files for DADA2, v2"
+author: "Michael McLaren"
+date: "2020-08-15"
+---
+
+This script creates taxonomic training data from Silva version 138 formatted
+for DADA2. This version of the script is an update to
+https://zenodo.org/record/3731176 to use the now-preferred method using the new
+function `dada2:::makeTaxonomyFasta_SilvaNR()` on files obtained directly from
+Silva. (The previous version used `dada2:::makeTaxonomyFasta_SilvaNR()` on
+preprocessed files from https://mothur.org/wiki/silva_reference_files/.)
+
+I'll use the here package to construct paths. A file called ".here" should
+first be created so that `here()` refers to the folder where this script is
+located.
+```{r}
+library(here)
+```
+
+A recent development version of DADA2 is needed for the new function
+`dada2:::makeTaxonomyFasta_SilvaNR()`. I will install this to a separate
+library folder to prevent interference with the Bioconductor version of DADA2.
+```{r}
+remotes::install_github("benjjneb/dada2", lib = here("r-lib"))
+```
+Next, I'll update the library path so that the dev version is used in this R
+session,
+```{r}
+.libPaths(c(here("r-lib"), .libPaths()))
+```
+
+```{r}
+packageVersion("dada2")
+#> [1] ‘1.17.3’
+```
+
+
+## Create the new database files
+
+The precursor files are from
+https://www.arb-silva.de/no_cache/download/archive/release_138/Exports/.
+
+Create the location where we will download the precursor files,
+```{r}
+dir.create(here("precursors"))
+```
+
+Download the precursor file `SILVA_138_SSURef_NR99_tax_silva.fasta.gz`; check
+against its MD5 sum.
+```{r}
+base_url <- 
+  "https://www.arb-silva.de/fileadmin/silva_databases/release_138/Exports/"
+fn <- "SILVA_138_SSURef_NR99_tax_silva.fasta.gz"
+download.file(
+  paste0(base_url, fn),
+  here("precursors", fn)
+)
+download.file(
+  paste0(base_url, paste0(fn, ".md5")),
+  here("precursors", paste0(fn, ".md5")),
+)
+x <- tools::md5sum(here("precursors", fn))
+y <- read.table(here("precursors", paste0(fn, ".md5")))
+stopifnot(x == y[[1]])
+```
+
+Download and extract the file `tax_slv_ssu_138.txt.gz`,
+```{r}
+base_url <-
+  "https://www.arb-silva.de/fileadmin/silva_databases/release_138/Exports/taxonomy/"
+fn <- "tax_slv_ssu_138.txt.gz"
+download.file(
+  paste0(base_url, fn), 
+  here("precursors", fn)
+)
+download.file(
+  paste0(base_url, paste0(fn, ".md5")), 
+  here("precursors", paste0(fn, ".md5"))
+)
+x <- tools::md5sum(here("precursors", fn))
+y <- read.table(here("precursors", paste0(fn, ".md5")))
+stopifnot(x == y[[1]])
+system(paste("gunzip", here("precursors", fn)))
+```
+
+Download the file `SILVA_138_SSURef_tax_silva.fasta.gz`,
+```{r}
+base_url <-
+  "https://www.arb-silva.de/fileadmin/silva_databases/release_138/Exports/"
+fn <- "SILVA_138_SSURef_tax_silva.fasta.gz"
+download.file(
+  paste0(base_url, fn), 
+  here("precursors", fn)
+)
+download.file(
+  paste0(base_url, paste0(fn, ".md5")), 
+  here("precursors", paste0(fn, ".md5"))
+)
+x <- tools::md5sum(here("precursors", fn))
+y <- read.table(here("precursors", paste0(fn, ".md5")))
+stopifnot(x == y[[1]])
+```
+
+Download the Silva v138 license,
+```{r}
+download.file(
+  "https://www.arb-silva.de/fileadmin/silva_databases/release_138/LICENSE.txt",
+  here("SILVA_LICENSE.txt")
+)
+```
+
+```{r}
+list.files(here("precursors"))
+#> [1] "SILVA_138_SSURef_NR99_tax_silva.fasta.gz"    
+#> [2] "SILVA_138_SSURef_NR99_tax_silva.fasta.gz.md5"
+#> [3] "SILVA_138_SSURef_tax_silva.fasta.gz"         
+#> [4] "SILVA_138_SSURef_tax_silva.fasta.gz.md5"     
+#> [5] "tax_slv_ssu_138.txt"                         
+#> [6] "tax_slv_ssu_138.txt.gz.md5"                  
+```
+
+Create the DADA2-formatted training files, with and without the species level.
+```{r}
+dada2:::makeTaxonomyFasta_SilvaNR(
+  here("precursors", "SILVA_138_SSURef_NR99_tax_silva.fasta.gz"), 
+  here("precursors", "tax_slv_ssu_138.txt"), 
+  here("silva_nr99_v138_train_set.fa.gz")
+)
+dada2:::makeTaxonomyFasta_SilvaNR(
+  here("precursors", "SILVA_138_SSURef_NR99_tax_silva.fasta.gz"), 
+  here("precursors", "tax_slv_ssu_138.txt"), 
+  include.species = TRUE, 
+  here("silva_nr99_v138_wSpecies_train_set.fa.gz")
+)
+```
+Note the change in filename format from previous versions: the addition of "99"
+in "nr99" distinguishes these files from the previous version.
+
+Create the DADA2-formatted species database file,
+```{r}
+dada2:::makeSpeciesFasta_Silva(
+  here("precursors", "SILVA_138_SSURef_tax_silva.fasta.gz"),
+  here("silva_species_assignment_v138.fa.gz")
+)
+```
+Note, this version should be identical to the previous version as it is created
+by the same function and starting file.
+
+```{r}
+list.files(here())
+#> [1] "precursors"                              
+#> [2] "r-lib"                                   
+#> [3] "SILVA_LICENSE.txt"                       
+#> [4] "silva_nr99_v138_train_set.fa.gz"         
+#> [5] "silva_nr99_v138_wSpecies_train_set.fa.gz"
+#> [6] "silva_species_assignment_v138.fa.gz"     
+#> [7] "silva-v138.Rmd"                          
+```
+
+## Compare to previous version
+
+Download the previous versions from the 
+[Zenodo record](https://zenodo.org/record/3731176),
+```{r}
+dir.create(here("previous"))
+download.file(
+  "https://zenodo.org/record/3731176/files/silva_nr_v138_train_set.fa.gz",
+  here("previous", "silva_nr_v138_train_set.fa.gz")
+)
+download.file(
+  "https://zenodo.org/record/3731176/files/silva_species_assignment_v138.fa.gz",
+  here("previous", "silva_species_assignment_v138.fa.gz")
+)
+```
+
+The species reference file should be identical,
+```{r}
+new <- here("silva_species_assignment_v138.fa.gz") %>%
+  Biostrings::readDNAStringSet()
+old <- here("previous", "silva_species_assignment_v138.fa.gz") %>%
+  Biostrings::readDNAStringSet()
+identical(new, old)
+#> [1] TRUE
+```
+
+What about the taxonomy assignment?
+```{r}
+new <- here("silva_nr99_v138_train_set.fa.gz") %>%
+  Biostrings::readDNAStringSet()
+old <- here("previous", "silva_nr_v138_train_set.fa.gz") %>%
+  Biostrings::readDNAStringSet()
+length(old)
+#> [1] 146796
+length(new)
+#> [1] 452522
+old %>% names %>% str_extract("^[^;]+") %>% table
+#> .
+#>   Archaea  Bacteria Eukaryota 
+#>      2846    129063     14887 
+new %>% names %>% str_extract("^[^;]+") %>% table
+#> .
+#>   Archaea  Bacteria Eukaryota 
+#>     20389    432033       100 
+```
+
+The `old` numbers agree with those from the mothur-formatted files they were
+created from, see https://mothur.org/wiki/silva_reference_files/. The new
+numbers are more in line with the total number of sequences in the Ref NR 99
+database (510984 sequences). The reduced number of Eukaryote sequences has to
+do with the handling of Eukaryota by the new function - a subset of just 100
+sequences are chosen for use as an outgroup.
+
+## Compare assignments from different databases
+
+I will use V4 amplicon data of animal fecal microbiomes from Thanissery et al
+(2019) doi:10.1101/822577, available at https://github.com/rthanis/animal-cdiff
+and archived at https://zenodo.org/record/3691924. I will download a phyloseq
+object that contains ASV sequences in the `refseq` slot and taxonomic
+assignments in the `tax_table` slot that are against the previous Silva release
+(v132), made using DADA2's taxonomy assignment functions.
+```{r}
+library(phyloseq)
+library(tidyverse)
+
+ps <- readRDS(
+  url("https://github.com/rthanis/animal-cdiff/raw/anaerobe/results/ps.Rds")
+)
+ps
+#> phyloseq-class experiment-level object
+#> otu_table()   OTU Table:         [ 10343 taxa and 195 samples ]
+#> sample_data() Sample Data:       [ 195 samples by 22 sample variables ]
+#> tax_table()   Taxonomy Table:    [ 10343 taxa by 8 taxonomic ranks ]
+#> refseq()      DNAStringSet:      [ 10343 reference sequences ]
+```
+To speed things up I'll use a subset of ASVs,
+```{r}
+ps0 <- prune_taxa(taxa_names(ps)[c(1:100, 1000:1150, 10300:10343)], ps)
+ps0
+#> phyloseq-class experiment-level object
+#> otu_table()   OTU Table:         [ 295 taxa and 195 samples ]
+#> sample_data() Sample Data:       [ 195 samples by 22 sample variables ]
+#> tax_table()   Taxonomy Table:    [ 295 taxa by 8 taxonomic ranks ]
+#> refseq()      DNAStringSet:      [ 295 reference sequences ]
+```
+And assign ASV sequences to Silva 138 using the new database files, allowing
+for multiple species assignments as done for the original dataset.
+```{r}
+tax138 <- ps0 %>%
+  refseq %>%
+  dada2::assignTaxonomy(
+    refFasta = here("silva_nr99_v138_train_set.fa.gz"), 
+    multithread = TRUE
+  ) %>%
+  dada2::addSpecies(
+    refFasta = here("silva_species_assignment_v138.fa.gz"),
+    allowMultiple = TRUE
+  )
+```
+Also assign ASVs to the v1 database files,
+```{r}
+tax138.v1 <- ps0 %>%
+  refseq %>%
+  dada2::assignTaxonomy(
+    refFasta = here("previous", "silva_nr_v138_train_set.fa.gz"), 
+    multithread = TRUE
+  ) %>%
+  dada2::addSpecies(
+    refFasta = here("previous", "silva_species_assignment_v138.fa.gz"),
+    allowMultiple = TRUE
+  )
+```
+Combine into a single data frame to compare results,
+```{r}
+tb0 <- tax_table(ps0) %>%
+  as("matrix") %>%
+  as_tibble %>%
+  select(-NCBI_species)
+tb1 <- as_tibble(tax138.v1)
+tb2 <- as_tibble(tax138)
+all.equal(tb0$Kingdom, tb1$Kingdom)
+#> [1] TRUE
+all.equal(tb0$Kingdom, tb2$Kingdom)
+#> [1] TRUE
+tb <- bind_cols(
+  # Original assignments against Silva 132
+  tb0 %>% dplyr::rename_with(~str_c(., ".0")), 
+  # Assignments against Silva 138, v1
+  tb1 %>% dplyr::rename_with(~str_c(., ".1")),
+  # Assignments against Silva 138, v2
+  tb2 %>% dplyr::rename_with(~str_c(., ".2"))
+)
+check <- tb %>%
+  select(starts_with("Phylum"), starts_with("Genus"))
+```
+Manually viewing `check` shows general agreement, which a few differences. Some
+rank names have changed from Silva version 132. For example, some taxa
+previously classified as phylum "Bacteroidetes" are now "Bacteroidota". Also,
+there assignments from the 138-v2 versus 138-v1 databases, presumably due to
+the expanded set of reference sequences.
+```{r}
+head(check)
+#> # A tibble: 6 x 6
+#>   Phylum.0    Phylum.1    Phylum.2    Genus.0       Genus.1      Genus.2        
+#>   <chr>       <chr>       <chr>       <chr>         <chr>        <chr>          
+#> 1 Proteobact… Proteobact… Proteobact… Escherichia/… Escherichia… Escherichia-Sh…
+#> 2 Firmicutes  Firmicutes  Firmicutes  Enterococcus  Enterococcus Enterococcus   
+#> 3 Firmicutes  Firmicutes  Firmicutes  <NA>          <NA>         [Ruminococcus]…
+#> 4 Firmicutes  Firmicutes  Firmicutes  Peptoclostri… Peptoclostr… Peptoclostridi…
+#> 5 Firmicutes  Firmicutes  Firmicutes  Streptococcus Streptococc… Streptococcus  
+#> 6 Firmicutes  Firmicutes  Firmicutes  Blautia       Blautia      Blautia        
+tail(check)
+#> # A tibble: 6 x 6
+#>   Phylum.0    Phylum.1   Phylum.2   Genus.0        Genus.1        Genus.2       
+#>   <chr>       <chr>      <chr>      <chr>          <chr>          <chr>         
+#> 1 Proteobact… Proteobac… Proteobac… <NA>           <NA>           <NA>          
+#> 2 <NA>        <NA>       Armatimon… <NA>           <NA>           <NA>          
+#> 3 Proteobact… Proteobac… Proteobac… <NA>           <NA>           <NA>          
+#> 4 <NA>        <NA>       Proteobac… <NA>           <NA>           <NA>          
+#> 5 Bacteroide… Bacteroid… Bacteroid… <NA>           <NA>           Capnocytophaga
+#> 6 Bacteroide… Bacteroid… Bacteroid… Rikenellaceae… Rikenellaceae… Rikenellaceae…
+```
+Do the same for species assignments,
+```{r}
+check_species <- tb %>%
+  select(starts_with("Species"))
+head(check_species)
+#> # A tibble: 6 x 3
+#>   Species.0                  Species.1                 Species.2                
+#>   <chr>                      <chr>                     <chr>                    
+#> 1 <NA>                       <NA>                      <NA>                     
+#> 2 <NA>                       <NA>                      <NA>                     
+#> 3 <NA>                       <NA>                      <NA>                     
+#> 4 <NA>                       <NA>                      <NA>                     
+#> 5 equinus/gallolyticus/infa… equinus/gallolyticus/inf… equinus/gallolyticus/inf…
+#> 6 hansenii/marasmi/producta  coccoides/hansenii/maras… coccoides/hansenii/maras…
+```
+Manual inspection again shows general agreement.
+
+## Session info
+
+```{r}
+options(width = 90)
+sessioninfo::session_info()
+#> ─ Session info ─────────────────────────────────────────────────────────────────────────
+#>  setting  value                       
+#>  version  R version 4.0.2 (2020-06-22)
+#>  os       Arch Linux                  
+#>  system   x86_64, linux-gnu           
+#>  ui       X11                         
+#>  language (EN)                        
+#>  collate  en_US.UTF-8                 
+#>  ctype    en_US.UTF-8                 
+#>  tz       America/New_York            
+#>  date     2020-08-15                  
+#> 
+#> ─ Packages ─────────────────────────────────────────────────────────────────────────────
+#>  ! package              * version  date       lib source                         
+#>    ade4                   1.7-15   2020-02-13 [2] CRAN (R 4.0.0)                 
+#>    ape                    5.4      2020-06-03 [2] CRAN (R 4.0.1)                 
+#>    assertthat             0.2.1    2019-03-21 [2] CRAN (R 4.0.0)                 
+#>    backports              1.1.6    2020-04-05 [2] CRAN (R 4.0.0)                 
+#>    Biobase                2.48.0   2020-04-27 [2] Bioconductor                   
+#>    BiocGenerics           0.34.0   2020-04-27 [2] Bioconductor                   
+#>    BiocParallel           1.22.0   2020-04-27 [2] Bioconductor                   
+#>    biomformat             1.16.0   2020-04-27 [2] Bioconductor                   
+#>    Biostrings             2.56.0   2020-04-27 [2] Bioconductor                   
+#>    bitops                 1.0-6    2013-08-17 [2] CRAN (R 4.0.0)                 
+#>    blob                   1.2.1    2020-01-20 [2] CRAN (R 4.0.0)                 
+#>    broom                  0.5.6    2020-04-20 [2] CRAN (R 4.0.0)                 
+#>    cellranger             1.1.0    2016-07-27 [2] CRAN (R 4.0.0)                 
+#>    cli                    2.0.2    2020-02-28 [2] CRAN (R 4.0.0)                 
+#>    cluster                2.1.0    2019-06-19 [3] CRAN (R 4.0.2)                 
+#>    codetools              0.2-16   2018-12-24 [3] CRAN (R 4.0.2)                 
+#>    colorspace             1.4-1    2019-03-18 [2] CRAN (R 4.0.0)                 
+#>    crayon                 1.3.4    2017-09-16 [2] CRAN (R 4.0.0)                 
+#>    dada2                  1.17.3   2020-08-14 [1] Github (benjjneb/dada2@9b9184a)
+#>    data.table             1.13.0   2020-07-24 [2] CRAN (R 4.0.2)                 
+#>    DBI                    1.1.0    2019-12-15 [2] CRAN (R 4.0.0)                 
+#>    dbplyr                 1.4.4    2020-05-27 [2] CRAN (R 4.0.0)                 
+#>    DelayedArray           0.14.1   2020-07-14 [1] Bioconductor                   
+#>    dplyr                * 1.0.1    2020-07-31 [2] CRAN (R 4.0.2)                 
+#>    ellipsis               0.3.1    2020-05-15 [2] CRAN (R 4.0.0)                 
+#>    fansi                  0.4.1    2020-01-08 [2] CRAN (R 4.0.0)                 
+#>    forcats              * 0.5.0    2020-03-01 [2] CRAN (R 4.0.0)                 
+#>    foreach                1.5.0    2020-03-30 [2] CRAN (R 4.0.2)                 
+#>    fs                     1.4.1    2020-04-04 [2] CRAN (R 4.0.0)                 
+#>    generics               0.0.2    2018-11-29 [2] CRAN (R 4.0.0)                 
+#>    GenomeInfoDb           1.24.2   2020-06-15 [2] Bioconductor                   
+#>    GenomeInfoDbData       1.2.3    2020-04-27 [2] Bioconductor                   
+#>    GenomicAlignments      1.24.0   2020-04-27 [2] Bioconductor                   
+#>    GenomicRanges          1.40.0   2020-04-27 [2] Bioconductor                   
+#>    ggplot2              * 3.3.2    2020-06-19 [2] CRAN (R 4.0.1)                 
+#>    glue                   1.4.1    2020-05-13 [2] CRAN (R 4.0.0)                 
+#>    gtable                 0.3.0    2019-03-25 [2] CRAN (R 4.0.0)                 
+#>    haven                  2.3.1    2020-06-01 [2] CRAN (R 4.0.1)                 
+#>    here                 * 0.1      2017-05-28 [2] CRAN (R 4.0.0)                 
+#>    hms                    0.5.3    2020-01-08 [2] CRAN (R 4.0.0)                 
+#>    httr                   1.4.1    2019-08-05 [2] CRAN (R 4.0.0)                 
+#>    hwriter                1.3.2    2014-09-10 [2] CRAN (R 4.0.0)                 
+#>    igraph                 1.2.5    2020-03-19 [2] CRAN (R 4.0.0)                 
+#>    IRanges                2.22.2   2020-05-21 [2] Bioconductor                   
+#>    iterators              1.0.12   2019-07-26 [2] CRAN (R 4.0.0)                 
+#>    jpeg                   0.1-8.1  2019-10-24 [2] CRAN (R 4.0.0)                 
+#>    jsonlite               1.7.0    2020-06-25 [2] CRAN (R 4.0.1)                 
+#>    lattice                0.20-41  2020-04-02 [3] CRAN (R 4.0.2)                 
+#>    latticeExtra           0.6-29   2019-12-19 [2] CRAN (R 4.0.0)                 
+#>    lifecycle              0.2.0    2020-03-06 [2] CRAN (R 4.0.0)                 
+#>    lubridate              1.7.9    2020-06-08 [2] CRAN (R 4.0.1)                 
+#>    magrittr               1.5      2014-11-22 [2] CRAN (R 4.0.0)                 
+#>    MASS                   7.3-51.6 2020-04-26 [3] CRAN (R 4.0.2)                 
+#>    Matrix                 1.2-18   2019-11-27 [3] CRAN (R 4.0.2)                 
+#>    matrixStats            0.56.0   2020-03-13 [2] CRAN (R 4.0.0)                 
+#>    mgcv                   1.8-31   2019-11-09 [3] CRAN (R 4.0.2)                 
+#>    modelr                 0.1.8    2020-05-19 [2] CRAN (R 4.0.0)                 
+#>    multtest               2.44.0   2020-04-27 [2] Bioconductor                   
+#>    munsell                0.5.0    2018-06-12 [2] CRAN (R 4.0.0)                 
+#>    nlme                   3.1-148  2020-05-24 [3] CRAN (R 4.0.2)                 
+#>  V nvimcom              * 0.9-98   2020-08-15 [2] local                          
+#>    permute                0.9-5    2019-03-12 [2] CRAN (R 4.0.0)                 
+#>    phyloseq             * 1.32.0   2020-04-27 [2] Bioconductor                   
+#>    pillar                 1.4.6    2020-07-10 [2] CRAN (R 4.0.2)                 
+#>    pkgconfig              2.0.3    2019-09-22 [2] CRAN (R 4.0.0)                 
+#>    plyr                   1.8.6    2020-03-03 [2] CRAN (R 4.0.0)                 
+#>    png                    0.1-7    2013-12-03 [2] CRAN (R 4.0.0)                 
+#>    purrr                * 0.3.4    2020-04-17 [2] CRAN (R 4.0.0)                 
+#>    R6                     2.4.1    2019-11-12 [2] CRAN (R 4.0.0)                 
+#>    RColorBrewer           1.1-2    2014-12-07 [2] CRAN (R 4.0.0)                 
+#>    Rcpp                   1.0.5    2020-07-06 [2] CRAN (R 4.0.2)                 
+#>    RcppParallel           5.0.2    2020-06-24 [2] CRAN (R 4.0.1)                 
+#>    RCurl                  1.98-1.2 2020-04-18 [2] CRAN (R 4.0.0)                 
+#>    readr                * 1.3.1    2018-12-21 [2] CRAN (R 4.0.0)                 
+#>    readxl                 1.3.1    2019-03-13 [2] CRAN (R 4.0.0)                 
+#>    reprex                 0.3.0    2019-05-16 [2] CRAN (R 4.0.1)                 
+#>    reshape2               1.4.4    2020-04-09 [2] CRAN (R 4.0.0)                 
+#>    rhdf5                  2.32.1   2020-06-18 [2] Bioconductor                   
+#>    Rhdf5lib               1.10.0   2020-04-27 [2] Bioconductor                   
+#>    rlang                  0.4.7    2020-07-09 [2] CRAN (R 4.0.2)                 
+#>    rprojroot              1.3-2    2018-01-03 [2] CRAN (R 4.0.0)                 
+#>    Rsamtools              2.4.0    2020-04-27 [2] Bioconductor                   
+#>    rstudioapi             0.11     2020-02-07 [2] CRAN (R 4.0.0)                 
+#>    rvest                  0.3.5    2019-11-08 [2] CRAN (R 4.0.0)                 
+#>    S4Vectors              0.26.1   2020-05-16 [2] Bioconductor                   
+#>    scales                 1.1.1    2020-05-11 [2] CRAN (R 4.0.0)                 
+#>    sessioninfo            1.1.1    2018-11-05 [2] CRAN (R 4.0.0)                 
+#>    ShortRead              1.46.0   2020-04-27 [2] Bioconductor                   
+#>    stringi                1.4.6    2020-02-17 [2] CRAN (R 4.0.0)                 
+#>    stringr              * 1.4.0    2019-02-10 [2] CRAN (R 4.0.0)                 
+#>    SummarizedExperiment   1.18.2   2020-07-09 [1] Bioconductor                   
+#>    survival               3.1-12   2020-04-10 [3] CRAN (R 4.0.2)                 
+#>    tibble               * 3.0.3    2020-07-10 [2] CRAN (R 4.0.2)                 
+#>    tidyr                * 1.1.1    2020-07-31 [2] CRAN (R 4.0.2)                 
+#>    tidyselect             1.1.0    2020-05-11 [2] CRAN (R 4.0.0)                 
+#>    tidyverse            * 1.3.0    2019-11-21 [2] CRAN (R 4.0.0)                 
+#>    usethis              * 1.6.1    2020-04-29 [2] CRAN (R 4.0.0)                 
+#>    utf8                   1.1.4    2018-05-24 [2] CRAN (R 4.0.0)                 
+#>    vctrs                  0.3.2    2020-07-15 [2] CRAN (R 4.0.2)                 
+#>    vegan                  2.5-6    2019-09-01 [2] CRAN (R 4.0.0)                 
+#>    withr                  2.2.0    2020-04-20 [2] CRAN (R 4.0.0)                 
+#>    xml2                   1.3.2    2020-04-23 [2] CRAN (R 4.0.0)                 
+#>    XVector                0.28.0   2020-04-27 [2] Bioconductor                   
+#>    zlibbioc               1.34.0   2020-04-27 [2] Bioconductor                   
+#> 
+#> [1] /home/michael/untracked-projects/dada2-silva-v138/v2/r-lib
+#> [2] /home/michael/R/x86_64-pc-linux-gnu-library/4.0
+#> [3] /usr/lib/R/library
+#> 
+#>  V ── Loaded and on-disk version mismatch.
+```
+
