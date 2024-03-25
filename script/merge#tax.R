@@ -18,3 +18,21 @@ saveRDS(seqtab, "/Users/nathanma/Documents/PHDLife/mike_proj/out/seqtab_final.rd
 saveRDS(tax, "/Users/nathanma/Documents/PHDLife/mike_proj/out/tax_final.rds")
 
 write.csv(tax,file="/Users/nathanma/Documents/PHDLife/mike_proj/out/test_protcal/taxa.CSV",append = FALSE, quote = FALSE , sep = " ",eol = "\n", na = "NA", dec = ".", row.names = TRUE,col.names = TRUE, qmethod = c("escape", "double"),fileEncoding = "")
+
+####
+saveRDS(seqtab.nochim,file="seqtab.nochim.rds")
+asv=as.data.frame(seqtab.nochim)
+asv=data.frame(ID=rownames(asv),asv)
+fwrite(asv,"/work/jyanglab/nathanma/project/16SRNA_vali/2024_vali_silva/out/ASV.txt",sep="\t",quote=F,col.names = T,row.names = F)
+#seqtab=readRDS("seqtab.rds")
+
+
+gc(full=TRUE) 
+silva <- "/work/jyanglab/nathanma/project/16SRNA_vali/2024_vali_silva/database_99/silva_nr99_v138.1_wSpecies_train_set.fa.gz"
+taxa <- assignTaxonomy(seqtab.nochim, silva, multithread=no_of_cores, verbose=TRUE)
+saveRDS(taxa,file="taxa.rds")
+taxa.print <- taxa # Removing sequence rownames for display only
+rownames(taxa.print) <- NULL
+head(taxa.print)
+seqtab.taxa.plus=cbind('#seq'=rownames(taxa),t(seqtab.nochim),taxa)
+write.table(seqtab.taxa.plus,"ASV.taxon.species.txt",sep="\t",quote=F,col.names = T,row.names = F)
