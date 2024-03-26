@@ -80,10 +80,10 @@ library(DESeq2)
 ##seqtab.nochim=readRDS("seqtab.nochim.rds")
 ##taxa=readRDS("taxa.rds")
 gc(full=TRUE) 
-silva <- "silva_nr99_v138.1_wSpecies_train_set.fa.gz" # don't change this
+silva <- "silva_nr99_v138.1_wSpecies_train_set.fa.gz"
 taxa <- assignTaxonomy(seqtab.nochim, silva, multithread=no_of_cores, verbose=TRUE)
 saveRDS(taxa,file="taxa.rds")
-taxa.print <- taxa # Removing sequence rownames for display only
+taxa.print <- taxa #Removing sequence rownames for display only
 rownames(taxa.print) <- NULL
 head(taxa.print)
 seqtab.taxa.plus=cbind('#seq'=rownames(taxa),t(seqtab.nochim),taxa)
@@ -91,7 +91,7 @@ write.table(seqtab.taxa.plus,"ASV.taxon.species.txt",sep="\t",quote=F,col.names 
 
 ###Phylogeny Reconstruction
 ##Before we can calculate a phylogenetic tree we need a FASTA file of the ASV sequences.
-# Name the sequence file
+#Name the sequence file
 sequence_outfile <- "dada2_nochim.fa"
 print(paste0('Writing FASTA file ', sequence_outfile, ' with ', ncol(seqtab.nochim), ' sequences.'))
 
@@ -100,6 +100,7 @@ for (i in 1:ncol(seqtab.nochim)){
   cat(paste0(">ASV_", i), file = sequence_outfile, sep="\n", append = TRUE)
   cat(colnames(seqtab.nochim)[i], file = sequence_outfile, sep="\n", append= TRUE)
 }
+
 
 # We need to make the external packages MAFFT and FastTree available for our use;
 # this is what the next three lines do.
