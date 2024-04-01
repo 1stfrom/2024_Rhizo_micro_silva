@@ -1,7 +1,7 @@
 import os
 
 # Specify the directory containing the files you want to rename
-directory_path = '/work/jyanglab/nathanma/project/16SRNA_vali/2024_vali_silva/data/raw_reads/2023_root_micro/F/filtered'
+#directory_path = '/work/jyanglab/nathanma/project/16SRNA_vali/2024_vali_silva/data/raw_reads/2023_root_micro/F/filtered'
 
 # Iterate over each file in the directory
 for filename in os.listdir(directory_path):
@@ -18,9 +18,9 @@ for filename in os.listdir(directory_path):
 
 print("All files have been renamed.")
 
-
+import os
 # Set the directory containing the files
-directory_path = '/Users/nathanma/Documents/PHDLife/test_haven'
+directory_path = '/work/jyanglab/nathanma/project/16SRNA_vali/2024_vali_silva/data/raw_reads/2023_root_micro/F/filtered'
 
 # Iterate over each file in the directory
 for filename in os.listdir(directory_path):

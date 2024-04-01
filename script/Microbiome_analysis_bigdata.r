@@ -50,10 +50,10 @@ for(sam in sample.names) {
 rm(derepF); rm(derepR)
 # Construct sequence table and remove chimeras
 seqtab <- makeSequenceTable(mergers)
-saveRDS(seqtab, "/work/jyanglab/nathanma/project/16SRNA_vali/2024_vali_silva/out/seqtab.rds") # CHANGE ME to where you want sequence table saved
+saveRDS(seqtab, "/work/jyanglab/nathanma/project/16SRNA_vali/2024_vali_silva/out/seqtab.rds") #seq table
 
 ####Remove chimeras
-seqtab.nochim <- removeBimeraDenovo(seqtab, method="consensus", multithread=no_of_cores, verbose=TRUE)
+seqtab.nochim <- removeBimeraDenovo(seqtab, method="consensus", multithread=TRUE, verbose=TRUE)
 #View(seqtab.nochim)
 dim(seqtab.nochim)
 sum(seqtab.nochim)/sum(seqtab)
@@ -61,7 +61,7 @@ sum(seqtab.nochim)/sum(seqtab)
 saveRDS(seqtab.nochim,file="seqtab.nochim.rds")
 asv=as.data.frame(seqtab.nochim)
 asv=data.frame(ID=rownames(asv),asv)
-fwrite(asv,"/work/jyanglab/nathanma/project/16SRNA_vali/2024_vali_silva/out/ASV.txt",sep="\t",quote=F,col.names = T,row.names = F)
+fwrite(asv,"/Users/nathanma/Documents/PHDLife/mike_proj/out/ASV.txt",sep="\t",quote=F,col.names = T,row.names = F)
 #seqtab=readRDS("seqtab.rds")
 
 #######3
@@ -70,14 +70,14 @@ library("dada2")
 library("gridExtra")
 library("phyloseq")
 library("Biostrings")
-library(data.table)
-library(DESeq2)
+library("data.table")
+library("DESeq2")
 ###Taxonomy Inference
 ##seqtab.nochim=readRDS("seqtab.nochim.rds")
 ##taxa=readRDS("taxa.rds")
 gc(full=TRUE) 
-silva <- "/work/jyanglab/nathanma/project/16SRNA_vali/2024_vali_silva/database_99/silva_nr99_v138.1_wSpecies_train_set.fa.gz"
-taxa <- assignTaxonomy(seqtab.nochim, silva, multithread=no_of_cores, verbose=TRUE)
+silva <- "/Users/nathanma/Documents/PHDLife/mike_proj/database/silva_nr99_v138.1_train_set.fa"
+taxa <- assignTaxonomy(seqtab.nochim, silva, multithread=TRUE, verbose=TRUE)
 saveRDS(taxa,file="taxa.rds")
 taxa.print <- taxa # Removing sequence rownames for display only
 rownames(taxa.print) <- NULL
@@ -85,10 +85,15 @@ head(taxa.print)
 seqtab.taxa.plus=cbind('#seq'=rownames(taxa),t(seqtab.nochim),taxa)
 write.table(seqtab.taxa.plus,"ASV.taxon.species.txt",sep="\t",quote=F,col.names = T,row.names = F)
 
+
+
+
+
 ###Phylogeny Reconstruction
 ##Before we can calculate a phylogenetic tree we need a FASTA file of the ASV sequences.
 # Name the sequence file
-sequence_outfile <- "dada2_nochim.fa"
+#seqtab.nochim=readRDS("seqtab.nochim.rds")
+sequence_outfile <- "dada2_nochim.fa"?
 print(paste0('Writing FASTA file ', sequence_outfile, ' with ', ncol(seqtab.nochim), ' sequences.'))
 
 file.remove(sequence_outfile) # Make sure the file does not exist
@@ -102,7 +107,7 @@ for (i in 1:ncol(seqtab.nochim)){
 source(file.path(Sys.getenv("LMOD_PKG"), "init/R"))
 module("load", "mafft")
 module("load", "fasttree")
-
+#/work/jyanglab/nathanma/config/R/packages/mafft-linux64
 # Multiple sequence alignment with MAFFT
 system("mafft --auto --thread -1 dada2_nochim.fa > dada2_nochim_mafft_msa.fa", intern=TRUE)
 
@@ -111,8 +116,13 @@ system("fasttree -gtr -nt < dada2_nochim_mafft_msa.fa > dada2_nochim.tree", inte
 
 list.files(pattern = "*dada2*")
 
-##seqtab.nochim=readRDS("seqtab.nochim.rds")
-##taxa=readRDS("taxa.rds")
+
+
+
+
+
+seqtab.nochim=readRDS("/work/jyanglab/nathanma/project/16SRNA_vali/2024_vali_silva/out/2023_root_micro/seqtab.nochim.rds")
+taxa=readRDS("/work/jyanglab/nathanma/project/16SRNA_vali/2024_vali_silva/out/2023_root_micro/taxa.rds")
 seqtab.nochim.0 <- seqtab.nochim
 taxa.0 <- taxa
 ##Change colnames(seqtab.nochim) and rownames(taxa) to the same: ASV_1, ASV_2…
@@ -129,18 +139,18 @@ ps.clean <- subset_taxa(ps, Kingdom == "Bacteria") %>%
   subset_taxa(!Class %in% c("Chloroplast")) %>%
   subset_taxa(!Family %in% c("mitochondria"))
 ps.clean
-#saveRDS(ps.clean,file="ps.clean.rds")
-ps.clean=readRDS("ps.clean.rds")
+saveRDS(ps.clean,file="ps.clean.rds")
+#ps.clean=readRDS("ps.clean.rds")
 ##Step 2, filter taxa (ASV) with low abundance (< 2);
 ps.clean.p0 <- filter_taxa(ps.clean, function(x) {sum(x > 3) >= (0.1*length(x))}, prune=TRUE)
-ps.clean.p0 ###678 taxa
+ps.clean.p0 #taxa
 asv_fil = otu_table(ps.clean.p0)
 asv2=asv_fil[apply(asv_fil, 1, sum)>1000,]
 asv22=asv2+1
 asv3=asv22@.Data
 ###ASV normalization
 asv3=varianceStabilizingTransformation(asv3,blind = F)
-#ps.clean.re <- transform_sample_counts(ps.clean.p0, function(x) x / sum(x))
+ps.clean.re <- transform_sample_counts(ps.clean.p0, function(x) x / sum(x))
 #ps.clean.re2 <- filter_taxa(ps.clean.re, function(x) sd(x) /mean(x)>3,TRUE)
 cv=apply(asv3, 2, function(x)sd(x) /mean(x))
 x=which(cv>1)
