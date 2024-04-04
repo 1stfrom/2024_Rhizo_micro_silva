@@ -170,15 +170,37 @@ phyloseq::plot_bar(ps.clean.re, fill = "Phylum") +
   geom_bar(aes(color = Phylum, fill = Phylum), stat = "identity", position = "stack")
 dev.off()
 
-
+##########################
 library(ggplot2) # Ensure ggplot2 is loaded for theme adjustment
 
-png("Phylum_Relative abundance.png", height = 100, width = 210, units = "mm", res = 600)
+png("Phylum_Relative abundance.png", height = 200, width = 400, units = "mm", res = 600)
 par(mfrow = c(1, 1), mar = c(4, 4, 1, 1))
 # Generate the plot with phyloseq::plot_bar and adjust legend text size
 plot <- phyloseq::plot_bar(ps.clean.re, fill = "Phylum") +
   geom_bar(aes(color = Phylum, fill = Phylum), stat = "identity", position = "stack") + 
-  theme(legend.text = element_text(size = 10)) +
+  theme(legend.text = element_text(size = 8)) +
   theme(axis.title.x = element_text(size = 1))
 print(plot)
 dev.off()
+
+
+##########################
+library(phyloseq)
+library(ggplot2)
+
+# Begin PNG device
+png("Phylum_Relative_Abundance.png", height = 300, width = 600, units = "mm", res = 1200)
+
+# Generate the plot with phyloseq::plot_bar and adjust
+plot <- phyloseq::plot_bar(ps.clean.re, fill = "Phylum") +
+  geom_bar(aes(color = Phylum, fill = Phylum), stat = "identity", position = "stack") + 
+  theme(legend.text = element_text(size = 12),
+        axis.title.x = element_text(size = 10), 
+        axis.text.x = element_text(angle = 45, hjust = 1, size = 0.5)) # Optional: Adjust x-axis text
+
+# Print the plot
+print(plot)
+
+# Turn off the device
+dev.off()
+
