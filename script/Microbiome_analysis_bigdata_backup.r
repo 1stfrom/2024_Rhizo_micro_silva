@@ -5,7 +5,7 @@ library("data.table")
 ###https://zhuanlan.zhihu.com/p/496892893
 ##https://benjjneb.github.io/dada2/bigdata_paired.html
 ##https://benjjneb.github.io/dada2/tutorial.html
-##https://benjjneb.github.io/dada2/training.html
+#https://benjjneb.github.io/dada2/training.html
 no_of_cores=4
 # File parsing
 pathF <- "/work/jyanglab/nathanma/project/16SRNA_vali/2024_vali_silva/data/raw_reads/F"
