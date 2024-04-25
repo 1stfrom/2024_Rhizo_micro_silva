@@ -36,6 +36,17 @@ dev.off()
 
 
 
+png("Pro_heat.png",height = 100,width =210,units = "mm",res=600)
+phyloseq::plot_heatmap(ps.pro.re, method = "MDS", 
+                       taxa.label = "Class", taxa.order = "Class", 
+                       trans=NULL, low="beige", high="red", na.value="beige")
+dev.off()
+
+
+png("Pro_heat.png",height = 100,width =210,units = "mm",res=600)
+phyloseq::plot_heatmap(ps.pro.re)
+dev.off()
+
 
 
 

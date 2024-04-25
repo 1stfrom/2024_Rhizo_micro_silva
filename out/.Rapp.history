@@ -1,1 +1,2 @@
 load("/Users/nathanma/Documents/PHDLife/mike_proj/out/seqtab.rds")
+load("/Users/yma18/Documents/GitHub/2024_Rhizo_micro_silva/out/seqtab.nochim.rds")

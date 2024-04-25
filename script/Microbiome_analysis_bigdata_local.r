@@ -110,10 +110,16 @@ module("load", "mafft")
 module("load", "fasttree")
 #/work/jyanglab/nathanma/config/R/packages/mafft-linux64
 # Multiple sequence alignment with MAFFT
-system("mafft --auto --thread -1 dada2_nochim.fa > dada2_nochim_mafft_msa.fa", intern=TRUE)
+system("/usr/local/bin/mafft --auto --thread -1 dada2_nochim.fa > dada2_nochim_mafft_msa.fa", intern=TRUE)
+
+#~/bin/mafft-mac/mafft.bat dada2_nochim.fa > dada2_nochim_mafft_msa.fa
+
+
 
 # Phylogenetic tree reconstruction with FastTree
 system("fasttree -gtr -nt < dada2_nochim_mafft_msa.fa > dada2_nochim.tree", intern=TRUE)
+
+#~/bin/fasttree/FastTree -gtr -nt < dada2_nochim_mafft_msa.fa > dada2_nochim.tree
 
 list.files(pattern = "*dada2*")
 
@@ -129,11 +135,16 @@ taxa.0 <- taxa
 ##Change colnames(seqtab.nochim) and rownames(taxa) to the same: ASV_1, ASV_2…
 colnames(seqtab.nochim) <- paste0("ASV_", seq(1:ncol(seqtab.nochim)))
 rownames(taxa) <- paste0("ASV_", seq(1:nrow(taxa)))
+
 ###use phyloseq() to make the data object
-ps <- phyloseq(otu_table(seqtab.nochim, taxa_are_rows=FALSE),
-          #     sample_data(metadata_df),
-               tax_table(taxa))
+ASV = otu_table(seqtab.nochim, taxa_are_rows=FALSE)
+TAX = tax_table(taxa)
+#SAM = sample_data()
+ps <- phyloseq(ASV,
+               #sample_data(metadata_df),
+               TAX)
 ps
+
 ###Step 1, remove Archaea, unknowns, chloroplasts;
 ps.clean <- subset_taxa(ps, Kingdom == "Bacteria") %>%
   subset_taxa(!is.na(Phylum)) %>%
@@ -203,4 +214,43 @@ print(plot)
 
 # Turn off the device
 dev.off()
+
+###########heat map
+total = median(sample_sums(ps.clean.re))
+ps.clean.re_abund <- filter_taxa(ps.clean.p0, function(x) sum(x > total*0.20) > 0, TRUE)
+
+
+png("ASV_heat_map.png", height = 300, width = 600, units = "mm", res = 1200)
+plot.heat <- phyloseq::plot_heatmap(ps.clean.re, method = "MDS", distance = "(A+B-2*J)/(A+B-J)", 
+             taxa.label = "Phylum", taxa.order = "Phylum", 
+             trans=NULL, low="beige", high="red", na.value="beige")
+print(plot)
+dev.off()
+
+#############tree
+library("ape")
+
+ps.clean.re_filtered <- prune_samples(sample_sums(ps) > 0, ps.clean.re)
+
+random_tree = rtree(ntaxa(ps.clean.re_filtered), rooted=TRUE, tip.label=taxa_names(ps.clean.re_filtered))
+plot(random_tree)
+ps.clean.ret1 = phyloseq(otu_table(seqtab.nochim, taxa_are_rows=FALSE), tax_table(taxa), random_tree)
+ps.clean.ret1
+
+plot_tree(ps.clean.ret1, color="Location", label.tips="taxa_names", ladderize="left", plot.margin=0.3)
+plot_tree(ps.clean.ret1, color="Depth", shape="Location", label.tips="taxa_names", ladderize="right", plot.margin=0.3)
+
+#write.table(ps.clean.re_filtered,"tree.txt",sep="\t",quote=F,col.names = T,row.names = F)
+
+
+ps.clean.re_filtered0 <- filter_taxa(ps.clean.re_filtered, function(x) sum(x > total*0.20) > 0, TRUE)
+png("plot_heatmap.png", height = 300, width = 600, units = "mm", res = 1200)
+plot.heat <- phyloseq::plot_heatmap(ps.clean.re_filtered, method = "MDS", distance = "(A+B-2*J)/(A+B-J)", 
+                                    taxa.label = "Phylum", taxa.order = "Phylum", 
+                                    trans=NULL, low="beige", high="red", na.value="beige")
+print(plot.heat)
+dev.off()
+
+
+plot_heatmap(ps.clean.re_filtered, taxa.label="Phylum")
 
