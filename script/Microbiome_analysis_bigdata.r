@@ -75,7 +75,7 @@ library("DESeq2")
 ###Taxonomy Inference
 ##seqtab.nochim=readRDS("seqtab.nochim.rds")
 ##taxa=readRDS("taxa.rds")
-gc(full=TRUE) 
+gc(full=TRUE)
 silva <- "/Users/nathanma/Documents/PHDLife/mike_proj/database/silva_nr99_v138.1_train_set.fa"
 taxa <- assignTaxonomy(seqtab.nochim, silva, multithread=TRUE, verbose=TRUE)
 saveRDS(taxa,file="taxa.rds")
