@@ -9,8 +9,9 @@ This repo contains the pipeline of rhizobiome 16s rRNA downstream analysis and t
   - 2018
   - 2019
 - Backcrossed GEM (BGEM) population
-2. [Amplicon Sequence Variant (ASV) extraction from 16s rRNA](#16sRNA)
-3. ASV Downstream Analysis
-- [Assignment of ASV to SILVA database](#silva)
-- 
+2. Pipeline
+  - [Amplicon Sequence Variant (ASV) extraction from 16s rRNA](#16sRNA)
+  - ASV Downstream Analysis
+    - [Taxa assignment of ASV to SILVA database](#silva)
+
 
