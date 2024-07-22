@@ -9,3 +9,9 @@ Phylum_Relative abundance.png
 Phylum_Relative_Abundance.png
 Phylum_Relative abundance.png
 script/Microbiome_analysis_bigdata_backup.r
+script/Microbiome_analysis_bigdata_local.r
+script/Microbiome_analysis_bigdata.r
+script/pc_trail.R
+script/Infer_Sequence_Variants.R
+script/merge#tax.R
+script/Microbiome analysis in R - Part III.html
