@@ -15,6 +15,6 @@ This repo contains the pipeline of rhizobiome 16s rRNA downstream analysis and t
 2. Pipeline
   - [Amplicon Sequence Variant (ASV) extraction from 16s rRNA](https://github.com/1stfrom/2024_Rhizo_micro_silva/tree/main/script/01_ASV_extract)
   - ASV Downstream Analysis
-    - [Taxa assignment of ASV to SILVA database](#silva)
-    - 
+    - [Taxa assignment of ASV to SILVA database](https://github.com/1stfrom/2024_Rhizo_micro_silva/tree/main/script/02_ASV_to_silva)
+    - [Data extraction](https://github.com/1stfrom/2024_Rhizo_micro_silva/tree/main/script/03_data_extract)
 
