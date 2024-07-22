@@ -4,7 +4,7 @@
 This repo contains the pipeline of rhizobiome 16s rRNA downstream analysis and the data extraction pipeline.
 
 ## Table of Contents
-1. Maize population
+1. Maize material
 - Maize Association Panel (MAP, n=282 lines, aka 282 panel)
   - 2018
   - 2019
