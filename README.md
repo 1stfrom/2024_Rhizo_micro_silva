@@ -8,9 +8,9 @@ This repo contains the pipeline of rhizobiome 16s rRNA downstream analysis and t
 1. Data
   - Maize material
     - Maize Association Panel (MAP, n=282 lines, aka 282 panel)
-      - 2018
-      - 2019
+      - path on HCC: /work/jyanglab/nathanma/project/16SRNA_vali/2024_vali_silva/data/raw_reads/2023_root_micro
   - Backcrossed GEM (BGEM) population
+    - path on HCC: /work/jyanglab/nathanma/project/16SRNA_vali/2024_vali_silva/data/raw_reads/meier_elife
 
 2. Pipeline
   - [Amplicon Sequence Variant (ASV) extraction from 16s rRNA](https://github.com/1stfrom/2024_Rhizo_micro_silva/tree/main/script/01_ASV_extract)
