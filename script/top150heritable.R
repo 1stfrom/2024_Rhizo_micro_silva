@@ -1,5 +1,5 @@
-HNi=read.table("Heritability_HN_inb_836.txt",header = T,sep="\t")
-LNi=read.table("Heritability_LN_inb_836.txt",header = T,sep="\t")
+HNi=read.table("../Heritability_HN_inb_836.txt",header = T,sep="\t")
+LNi=read.table("../Heritability_LN_inb_836.txt",header = T,sep="\t")
 
 HNi150 <- HNi[order(HNi$Heritability, decreasing = TRUE), ][1:150, ]
 LNi150 <- LNi[order(LNi$Heritability, decreasing = TRUE), ][1:150, ]

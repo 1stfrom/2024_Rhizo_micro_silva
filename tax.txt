@@ -1,0 +1,389 @@
+ASV1	Bacteria; Actinobacteriota; Actinobacteria; Streptosporangiales; Streptosporangiaceae; Nonomuraea; NA
+ASV2	Bacteria; Acidobacteriota; Subgroup 25; NA; NA; NA; NA
+ASV3	Bacteria; Chloroflexi; Ktedonobacteria; Ktedonobacterales; Ktedonobacteraceae; NA; NA
+ASV4	Bacteria; Planctomycetota; Planctomycetes; Planctomycetales; Rubinisphaeraceae; SH-PL14; NA
+ASV5	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Burkholderiaceae; Burkholderia-Caballeronia-Paraburkholderia; NA
+ASV6	Bacteria; Armatimonadota; NA; NA; NA; NA; NA
+ASV7	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Burkholderiaceae; Burkholderia-Caballeronia-Paraburkholderia; insecticola
+ASV8	Bacteria; Acidobacteriota; Subgroup 25; NA; NA; NA; NA
+ASV9	Bacteria; Acidobacteriota; Acidobacteriae; Bryobacterales; Bryobacteraceae; Bryobacter; NA
+ASV10	Bacteria; Actinobacteriota; Actinobacteria; Frankiales; Geodermatophilaceae; Blastococcus; NA
+ASV11	Bacteria; Myxococcota; bacteriap25; NA; NA; NA; NA
+ASV12	Bacteria; Actinobacteriota; Actinobacteria; Streptosporangiales; Streptosporangiaceae; Streptosporangium; NA
+ASV13	Bacteria; Bacteroidota; Bacteroidia; Cytophagales; Hymenobacteraceae; Adhaeribacter; NA
+ASV14	Bacteria; Actinobacteriota; Thermoleophilia; Gaiellales; NA; NA; NA
+ASV15	Bacteria; Actinobacteriota; Thermoleophilia; Gaiellales; NA; NA; NA
+ASV16	Bacteria; Actinobacteriota; Actinobacteria; Propionibacteriales; Nocardioidaceae; Kribbella; NA
+ASV17	Bacteria; Bacteroidota; Bacteroidia; Chitinophagales; Chitinophagaceae; NA; NA
+ASV18	Bacteria; Planctomycetota; Phycisphaerae; Tepidisphaerales; WD2101 soil group; NA; NA
+ASV19	Bacteria; Chloroflexi; Chloroflexia; Thermomicrobiales; JG30-KF-CM45; NA; NA
+ASV20	Bacteria; Proteobacteria; Gammaproteobacteria; Pseudomonadales; Pseudomonadaceae; Pseudomonas; chlororaphis
+ASV21	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Nitrosomonadaceae; Nitrosospira; NA
+ASV22	Bacteria; Proteobacteria; Gammaproteobacteria; Pseudomonadales; Pseudomonadaceae; Pseudomonas; NA
+ASV23	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Burkholderiaceae; Burkholderia-Caballeronia-Paraburkholderia; pseudomallei
+ASV24	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Labraceae; Labrys; NA
+ASV25	Bacteria; Patescibacteria; Saccharimonadia; Saccharimonadales; NA; NA; NA
+ASV26	Bacteria; Actinobacteriota; Thermoleophilia; Gaiellales; NA; NA; NA
+ASV27	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Labraceae; Labrys; miyagiensis
+ASV28	Bacteria; Actinobacteriota; Thermoleophilia; Solirubrobacterales; 67-14; NA; NA
+ASV29	Bacteria; Proteobacteria; Alphaproteobacteria; Azospirillales; Azospirillaceae; Skermanella; NA
+ASV30	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Hyphomicrobiaceae; Hyphomicrobium; NA
+ASV31	Bacteria; Armatimonadota; Chthonomonadetes; Chthonomonadales; NA; NA; NA
+ASV32	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Nitrosomonadaceae; mle1-7; NA
+ASV33	Bacteria; Proteobacteria; Alphaproteobacteria; Acetobacterales; Acetobacteraceae; NA; NA
+ASV34	Bacteria; Actinobacteriota; Actinobacteria; Streptosporangiales; Thermomonosporaceae; Actinoallomurus; NA
+ASV35	Bacteria; Chloroflexi; Chloroflexia; Thermomicrobiales; JG30-KF-CM45; NA; NA
+ASV36	Bacteria; Acidobacteriota; Acidobacteriae; Acidobacteriales; NA; NA; NA
+ASV37	Bacteria; Proteobacteria; Gammaproteobacteria; Pseudomonadales; Pseudomonadaceae; Pseudomonas; umsongensis
+ASV38	Bacteria; Proteobacteria; Alphaproteobacteria; Azospirillales; Inquilinaceae; Inquilinus; limosus
+ASV39	Bacteria; Actinobacteriota; Actinobacteria; Propionibacteriales; Nocardioidaceae; Kribbella; NA
+ASV40	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; Vicinamibacteraceae; NA; NA
+ASV41	Bacteria; Proteobacteria; Gammaproteobacteria; Xanthomonadales; Xanthomonadaceae; Stenotrophomonas; tumulicola
+ASV42	Bacteria; Planctomycetota; Planctomycetes; Planctomycetales; NA; NA; NA
+ASV43	Bacteria; Actinobacteriota; Actinobacteria; Propionibacteriales; Nocardioidaceae; Marmoricola; NA
+ASV44	Bacteria; Planctomycetota; Phycisphaerae; Tepidisphaerales; WD2101 soil group; NA; NA
+ASV45	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Burkholderiaceae; Burkholderia-Caballeronia-Paraburkholderia; vietnamiensis
+ASV46	Bacteria; Chloroflexi; KD4-96; NA; NA; NA; NA
+ASV47	Bacteria; Chloroflexi; Ktedonobacteria; Ktedonobacterales; JG30-KF-AS9; NA; NA
+ASV48	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV49	Bacteria; Planctomycetota; Phycisphaerae; Tepidisphaerales; WD2101 soil group; NA; NA
+ASV50	Bacteria; Armatimonadota; NA; NA; NA; NA; NA
+ASV51	Bacteria; Proteobacteria; Gammaproteobacteria; Xanthomonadales; Rhodanobacteraceae; Dyella; NA
+ASV52	Bacteria; Planctomycetota; Phycisphaerae; Tepidisphaerales; WD2101 soil group; NA; NA
+ASV53	Bacteria; Planctomycetota; Planctomycetes; Pirellulales; Pirellulaceae; Pirellula; NA
+ASV54	Bacteria; Planctomycetota; Planctomycetes; Gemmatales; Gemmataceae; Gemmata; NA
+ASV55	Bacteria; Proteobacteria; Alphaproteobacteria; Elsterales; NA; NA; NA
+ASV56	Bacteria; Proteobacteria; Gammaproteobacteria; Enterobacterales; Erwiniaceae; Pantoea; ananatis
+ASV57	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV58	Bacteria; Acidobacteriota; Blastocatellia; Pyrinomonadales; Pyrinomonadaceae; RB41; NA
+ASV59	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV60	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV61	Bacteria; Acidobacteriota; Blastocatellia; Blastocatellales; Blastocatellaceae; NA; NA
+ASV62	Bacteria; Acidobacteriota; Holophagae; Subgroup 7; NA; NA; NA
+ASV63	Bacteria; Chloroflexi; Chloroflexia; Thermomicrobiales; Thermomicrobiaceae; Nitrolancea; NA
+ASV64	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV65	Bacteria; Proteobacteria; Alphaproteobacteria; Acetobacterales; Acetobacteraceae; Belnapia; NA
+ASV66	Bacteria; Actinobacteriota; Actinobacteria; Frankiales; Geodermatophilaceae; Blastococcus; NA
+ASV67	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Burkholderiaceae; Burkholderia-Caballeronia-Paraburkholderia; xenovorans
+ASV68	Bacteria; Acidobacteriota; Blastocatellia; DS-100; NA; NA; NA
+ASV69	Bacteria; Acidobacteriota; Blastocatellia; 11-24; NA; NA; NA
+ASV70	Bacteria; Myxococcota; Polyangia; Polyangiales; Phaselicystidaceae; Phaselicystis; NA
+ASV71	Bacteria; Planctomycetota; Phycisphaerae; Tepidisphaerales; WD2101 soil group; NA; NA
+ASV72	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; Vicinamibacteraceae; NA; NA
+ASV73	Bacteria; Chloroflexi; KD4-96; NA; NA; NA; NA
+ASV74	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; Vicinamibacteraceae; NA; NA
+ASV75	Bacteria; Planctomycetota; Planctomycetes; Pirellulales; Pirellulaceae; NA; NA
+ASV76	Bacteria; Acidobacteriota; Blastocatellia; Pyrinomonadales; Pyrinomonadaceae; RB41; NA
+ASV77	Bacteria; Acidobacteriota; Subgroup 25; NA; NA; NA; NA
+ASV78	Bacteria; Armatimonadota; NA; NA; NA; NA; NA
+ASV79	Bacteria; Actinobacteriota; Actinobacteria; Catenulisporales; Actinospicaceae; Actinospica; NA
+ASV80	Bacteria; Firmicutes; Bacilli; Bacillales; Bacillaceae; Bacillus; niacini
+ASV81	Bacteria; Proteobacteria; Alphaproteobacteria; Sphingomonadales; Sphingomonadaceae; Sphingomonas; NA
+ASV82	Bacteria; Actinobacteriota; Actinobacteria; Propionibacteriales; Nocardioidaceae; Marmoricola; NA
+ASV83	Bacteria; Actinobacteriota; Thermoleophilia; Gaiellales; NA; NA; NA
+ASV84	Bacteria; Planctomycetota; Planctomycetes; Pirellulales; Pirellulaceae; Pirellula; NA
+ASV85	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Comamonadaceae; Variovorax; boronicumulans
+ASV86	Bacteria; Planctomycetota; Planctomycetes; Isosphaerales; Isosphaeraceae; NA; NA
+ASV87	Bacteria; Proteobacteria; Gammaproteobacteria; Xanthomonadales; Rhodanobacteraceae; Dyella; NA
+ASV88	Bacteria; Chloroflexi; Chloroflexia; Thermomicrobiales; JG30-KF-CM45; NA; NA
+ASV89	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV90	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Beijerinckiaceae; Microvirga; NA
+ASV91	Bacteria; Actinobacteriota; Actinobacteria; Frankiales; Acidothermaceae; Acidothermus; NA
+ASV92	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Xanthobacteraceae; NA; NA
+ASV93	Bacteria; Nitrospirota; Nitrospiria; Nitrospirales; Nitrospiraceae; Nitrospira; japonica
+ASV94	Bacteria; Acidobacteriota; Holophagae; Subgroup 7; NA; NA; NA
+ASV95	Bacteria; Verrucomicrobiota; Verrucomicrobiae; Chthoniobacterales; Chthoniobacteraceae; Chthoniobacter; NA
+ASV96	Bacteria; Planctomycetota; Planctomycetes; Gemmatales; Gemmataceae; Zavarzinella; NA
+ASV97	Bacteria; Planctomycetota; Planctomycetes; Planctomycetales; NA; NA; NA
+ASV98	Bacteria; Planctomycetota; Planctomycetes; Isosphaerales; Isosphaeraceae; NA; NA
+ASV99	Bacteria; Planctomycetota; Phycisphaerae; Tepidisphaerales; WD2101 soil group; NA; NA
+ASV100	Bacteria; Verrucomicrobiota; Verrucomicrobiae; Chthoniobacterales; Chthoniobacteraceae; Candidatus Udaeobacter; NA
+ASV101	Bacteria; Proteobacteria; Gammaproteobacteria; Gammaproteobacteria Incertae Sedis; Unknown Family; Acidibacter; NA
+ASV102	Bacteria; Planctomycetota; Phycisphaerae; Tepidisphaerales; WD2101 soil group; NA; NA
+ASV103	Bacteria; Planctomycetota; Planctomycetes; Pirellulales; Pirellulaceae; Pirellula; NA
+ASV104	Bacteria; Acidobacteriota; Acidobacteriae; Acidobacteriales; NA; NA; NA
+ASV105	Bacteria; Proteobacteria; Alphaproteobacteria; Dongiales; Dongiaceae; Dongia; NA
+ASV106	Bacteria; Planctomycetota; Planctomycetes; Pirellulales; Pirellulaceae; Pirellula; NA
+ASV107	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; SC-I-84; NA; NA
+ASV108	Bacteria; Proteobacteria; Gammaproteobacteria; Pseudomonadales; Moraxellaceae; Acinetobacter; pittii
+ASV109	Bacteria; Chloroflexi; Chloroflexia; Chloroflexales; Roseiflexaceae; NA; NA
+ASV110	Bacteria; Latescibacterota; NA; NA; NA; NA; NA
+ASV111	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Methyloligellaceae; NA; NA
+ASV112	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Oxalobacteraceae; Massilia; NA
+ASV113	Bacteria; Armatimonadota; NA; NA; NA; NA; NA
+ASV114	Bacteria; Firmicutes; Bacilli; Bacillales; Planococcaceae; Sporosarcina; NA
+ASV115	Bacteria; Chloroflexi; Dehalococcoidia; S085; NA; NA; NA
+ASV116	Bacteria; Proteobacteria; Gammaproteobacteria; Pseudomonadales; Pseudomonadaceae; Pseudomonas; NA
+ASV117	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV118	Bacteria; Verrucomicrobiota; Verrucomicrobiae; Pedosphaerales; Pedosphaeraceae; NA; NA
+ASV119	Bacteria; Armatimonadota; NA; NA; NA; NA; NA
+ASV120	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Burkholderiaceae; Burkholderia-Caballeronia-Paraburkholderia; NA
+ASV121	Bacteria; Acidobacteriota; Blastocatellia; Pyrinomonadales; Pyrinomonadaceae; RB41; NA
+ASV122	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV123	Bacteria; Proteobacteria; Gammaproteobacteria; Pseudomonadales; Pseudomonadaceae; Pseudomonas; NA
+ASV124	Bacteria; Planctomycetota; Planctomycetes; Gemmatales; Gemmataceae; NA; NA
+ASV125	Bacteria; Proteobacteria; Gammaproteobacteria; Xanthomonadales; Xanthomonadaceae; Luteimonas; NA
+ASV126	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; Vicinamibacteraceae; NA; NA
+ASV127	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Xanthobacteraceae; Bradyrhizobium; elkanii
+ASV128	Bacteria; Planctomycetota; Phycisphaerae; Tepidisphaerales; WD2101 soil group; NA; NA
+ASV129	Bacteria; Acidobacteriota; Acidobacteriae; Acidobacteriales; NA; NA; NA
+ASV130	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV131	Bacteria; Actinobacteriota; Thermoleophilia; Solirubrobacterales; Solirubrobacteraceae; Conexibacter; NA
+ASV132	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Nitrosomonadaceae; mle1-7; NA
+ASV133	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV134	Bacteria; Patescibacteria; Saccharimonadia; Saccharimonadales; LWQ8; NA; NA
+ASV135	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV136	Bacteria; Proteobacteria; Gammaproteobacteria; Pseudomonadales; Pseudomonadaceae; Pseudomonas; psychrotolerans
+ASV137	Bacteria; Planctomycetota; Planctomycetes; Gemmatales; Gemmataceae; NA; NA
+ASV138	Bacteria; Planctomycetota; Phycisphaerae; Tepidisphaerales; WD2101 soil group; NA; NA
+ASV139	Bacteria; Verrucomicrobiota; Verrucomicrobiae; Chthoniobacterales; Chthoniobacteraceae; Candidatus Udaeobacter; NA
+ASV140	Bacteria; Armatimonadota; NA; NA; NA; NA; NA
+ASV141	Bacteria; Chloroflexi; KD4-96; NA; NA; NA; NA
+ASV142	Bacteria; Firmicutes; Bacilli; Bacillales; Bacillaceae; Bacillus; thuringiensis
+ASV143	Bacteria; Chloroflexi; Ktedonobacteria; C0119; NA; NA; NA
+ASV144	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV145	Bacteria; Chloroflexi; Chloroflexia; Thermomicrobiales; AKYG1722; NA; NA
+ASV146	Bacteria; WPS-2; NA; NA; NA; NA; NA
+ASV147	Bacteria; Planctomycetota; Phycisphaerae; Tepidisphaerales; WD2101 soil group; NA; NA
+ASV148	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV149	Bacteria; Planctomycetota; Phycisphaerae; Tepidisphaerales; WD2101 soil group; NA; NA
+ASV150	Bacteria; Gemmatimonadota; Gemmatimonadetes; Gemmatimonadales; Gemmatimonadaceae; NA; NA
+ASV151	Bacteria; Proteobacteria; Alphaproteobacteria; Sphingomonadales; Sphingomonadaceae; Sphingomonas; daechungensis
+ASV152	Bacteria; Bacteroidota; Bacteroidia; Chitinophagales; Chitinophagaceae; Niastella; NA
+ASV153	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV154	Bacteria; Armatimonadota; NA; NA; NA; NA; NA
+ASV155	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Xanthobacteraceae; Pseudolabrys; NA
+ASV156	Bacteria; Proteobacteria; Alphaproteobacteria; Elsterales; NA; NA; NA
+ASV157	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Comamonadaceae; NA; NA
+ASV158	Bacteria; Acidobacteriota; Acidobacteriae; Bryobacterales; Bryobacteraceae; Bryobacter; NA
+ASV159	Bacteria; Acidobacteriota; Acidobacteriae; Acidobacteriales; Acidobacteriaceae (Subgroup 1); Terracidiphilus; NA
+ASV160	Bacteria; Proteobacteria; Gammaproteobacteria; Pseudomonadales; Pseudomonadaceae; Pseudomonas; yamanorum
+ASV161	Bacteria; Planctomycetota; Planctomycetes; Gemmatales; Gemmataceae; NA; NA
+ASV162	Bacteria; Actinobacteriota; Thermoleophilia; Solirubrobacterales; Solirubrobacteraceae; Conexibacter; NA
+ASV163	Bacteria; Acidobacteriota; Blastocatellia; Blastocatellales; Blastocatellaceae; NA; NA
+ASV164	Bacteria; Bacteroidota; Bacteroidia; Chitinophagales; Chitinophagaceae; NA; NA
+ASV165	Bacteria; Actinobacteriota; Thermoleophilia; Solirubrobacterales; Solirubrobacteraceae; Solirubrobacter; NA
+ASV166	Bacteria; Actinobacteriota; Actinobacteria; Streptomycetales; Streptomycetaceae; Streptomyces; abikoensis
+ASV167	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; A21b; NA; NA
+ASV168	Bacteria; Planctomycetota; Planctomycetes; Gemmatales; Gemmataceae; NA; NA
+ASV169	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV170	Bacteria; Planctomycetota; Phycisphaerae; Tepidisphaerales; WD2101 soil group; NA; NA
+ASV171	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; Vicinamibacteraceae; NA; NA
+ASV172	Bacteria; Verrucomicrobiota; Verrucomicrobiae; Chthoniobacterales; Chthoniobacteraceae; Chthoniobacter; NA
+ASV173	Bacteria; Proteobacteria; Gammaproteobacteria; Pseudomonadales; Pseudomonadaceae; Pseudomonas; frederiksbergensis
+ASV174	Bacteria; Verrucomicrobiota; Verrucomicrobiae; Chthoniobacterales; Chthoniobacteraceae; Candidatus Udaeobacter; NA
+ASV175	Bacteria; Gemmatimonadota; Gemmatimonadetes; Gemmatimonadales; Gemmatimonadaceae; NA; NA
+ASV176	Bacteria; Proteobacteria; Gammaproteobacteria; Steroidobacterales; Steroidobacteraceae; Steroidobacter; NA
+ASV177	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Beijerinckiaceae; Psychroglaciecola; NA
+ASV178	Bacteria; Chloroflexi; Dehalococcoidia; S085; NA; NA; NA
+ASV179	Bacteria; Firmicutes; Bacilli; Bacillales; Bacillaceae; Bacillus; NA
+ASV180	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV181	Bacteria; Chloroflexi; KD4-96; NA; NA; NA; NA
+ASV182	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV183	Bacteria; Chloroflexi; TK10; NA; NA; NA; NA
+ASV184	Bacteria; Methylomirabilota; Methylomirabilia; Rokubacteriales; NA; NA; NA
+ASV185	Bacteria; Acidobacteriota; Acidobacteriae; Bryobacterales; Bryobacteraceae; Bryobacter; NA
+ASV186	Bacteria; Myxococcota; Polyangia; Haliangiales; Haliangiaceae; Haliangium; NA
+ASV187	Bacteria; Proteobacteria; Gammaproteobacteria; Enterobacterales; Erwiniaceae; Pantoea; NA
+ASV188	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; Vicinamibacteraceae; NA; NA
+ASV189	Bacteria; Proteobacteria; Alphaproteobacteria; Sphingomonadales; Sphingomonadaceae; Sphingomonas; NA
+ASV190	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; Vicinamibacteraceae; NA; NA
+ASV191	Bacteria; Actinobacteriota; Actinobacteria; Streptosporangiales; Streptosporangiaceae; Microbispora; NA
+ASV192	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Comamonadaceae; Piscinibacter; NA
+ASV193	Bacteria; Planctomycetota; Planctomycetes; Gemmatales; Gemmataceae; Gemmata; NA
+ASV194	Bacteria; Planctomycetota; Phycisphaerae; Tepidisphaerales; CPla-3 termite group; NA; NA
+ASV195	Bacteria; Proteobacteria; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Klebsiella; pneumoniae
+ASV196	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV197	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; Vicinamibacteraceae; NA; NA
+ASV198	Bacteria; Acidobacteriota; Acidobacteriae; Solibacterales; Solibacteraceae; Candidatus Solibacter; NA
+ASV199	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Rhizobiales Incertae Sedis; Nordella; oligomobilis
+ASV200	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; SC-I-84; NA; NA
+ASV201	Bacteria; Armatimonadota; NA; NA; NA; NA; NA
+ASV202	Bacteria; Proteobacteria; Alphaproteobacteria; Reyranellales; Reyranellaceae; Reyranella; NA
+ASV203	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Comamonadaceae; Variovorax; paradoxus
+ASV204	Bacteria; Acidobacteriota; Subgroup 25; NA; NA; NA; NA
+ASV205	Bacteria; Chloroflexi; Ktedonobacteria; Ktedonobacterales; JG30-KF-AS9; NA; NA
+ASV206	Bacteria; Chloroflexi; Ktedonobacteria; Ktedonobacterales; Ktedonobacteraceae; FCPS473; NA
+ASV207	Bacteria; Planctomycetota; Planctomycetes; Isosphaerales; Isosphaeraceae; Singulisphaera; acidiphila
+ASV208	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Rhizobiaceae; Allorhizobium-Neorhizobium-Pararhizobium-Rhizobium; mesosinicum
+ASV209	Bacteria; Proteobacteria; Alphaproteobacteria; Acetobacterales; Acetobacteraceae; NA; NA
+ASV210	Bacteria; Proteobacteria; Alphaproteobacteria; NA; NA; NA; NA
+ASV211	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Oxalobacteraceae; Noviherbaspirillum; NA
+ASV212	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; Vicinamibacteraceae; NA; NA
+ASV213	Bacteria; Chloroflexi; Chloroflexia; Thermomicrobiales; JG30-KF-CM45; NA; NA
+ASV214	Bacteria; Planctomycetota; Planctomycetes; Pirellulales; Pirellulaceae; Pirellula; NA
+ASV215	Bacteria; Bacteroidota; Bacteroidia; Chitinophagales; Chitinophagaceae; Niastella; NA
+ASV216	Bacteria; Actinobacteriota; Thermoleophilia; Gaiellales; NA; NA; NA
+ASV217	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Comamonadaceae; Piscinibacter; NA
+ASV218	Bacteria; Acidobacteriota; Blastocatellia; DS-100; NA; NA; NA
+ASV219	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV220	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; Vicinamibacteraceae; NA; NA
+ASV221	Bacteria; Firmicutes; Bacilli; Paenibacillales; Paenibacillaceae; Paenibacillus; NA
+ASV222	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Beijerinckiaceae; Methylocella; NA
+ASV223	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Burkholderiaceae; Ralstonia; insidiosa
+ASV224	Bacteria; Verrucomicrobiota; Verrucomicrobiae; Chthoniobacterales; Chthoniobacteraceae; LD29; NA
+ASV225	Bacteria; Verrucomicrobiota; Verrucomicrobiae; Pedosphaerales; Pedosphaeraceae; NA; NA
+ASV226	Bacteria; Proteobacteria; Gammaproteobacteria; Xanthomonadales; Rhodanobacteraceae; NA; NA
+ASV227	Bacteria; Proteobacteria; Alphaproteobacteria; Sphingomonadales; Sphingomonadaceae; Sphingobium; herbicidovorans
+ASV228	Bacteria; Actinobacteriota; Actinobacteria; Streptomycetales; Streptomycetaceae; Kitasatospora; NA
+ASV229	Bacteria; Chloroflexi; TK10; NA; NA; NA; NA
+ASV230	Bacteria; Planctomycetota; Phycisphaerae; Tepidisphaerales; WD2101 soil group; NA; NA
+ASV231	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter; NA
+ASV232	Bacteria; Planctomycetota; Planctomycetes; Gemmatales; Gemmataceae; NA; NA
+ASV233	Bacteria; Actinobacteriota; Actinobacteria; Streptomycetales; Streptomycetaceae; Streptomyces; puniciscabiei
+ASV234	Bacteria; Proteobacteria; Gammaproteobacteria; Xanthomonadales; Xanthomonadaceae; Stenotrophomonas; maltophilia
+ASV235	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Comamonadaceae; Variovorax; paradoxus
+ASV236	Bacteria; Proteobacteria; Alphaproteobacteria; Sphingomonadales; Sphingomonadaceae; NA; NA
+ASV237	Bacteria; Methylomirabilota; Methylomirabilia; Rokubacteriales; NA; NA; NA
+ASV238	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Xanthobacteraceae; Rhodoplanes; NA
+ASV239	Bacteria; Planctomycetota; Planctomycetes; Gemmatales; Gemmataceae; Gemmata; NA
+ASV240	Bacteria; Planctomycetota; Planctomycetes; Gemmatales; Gemmataceae; NA; NA
+ASV241	Bacteria; Verrucomicrobiota; Verrucomicrobiae; Chthoniobacterales; Chthoniobacteraceae; Chthoniobacter; NA
+ASV242	Bacteria; Actinobacteriota; Thermoleophilia; Gaiellales; NA; NA; NA
+ASV243	Bacteria; Proteobacteria; Gammaproteobacteria; Xanthomonadales; Rhodanobacteraceae; Dokdonella; NA
+ASV244	Bacteria; Myxococcota; Polyangia; Polyangiales; Polyangiaceae; Pajaroellobacter; NA
+ASV245	Bacteria; Planctomycetota; Planctomycetes; Gemmatales; Gemmataceae; NA; NA
+ASV246	Bacteria; Proteobacteria; Gammaproteobacteria; Gammaproteobacteria Incertae Sedis; Unknown Family; Acidibacter; NA
+ASV247	Bacteria; Chloroflexi; KD4-96; NA; NA; NA; NA
+ASV248	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Rhizobiaceae; Allorhizobium-Neorhizobium-Pararhizobium-Rhizobium; phaseoli
+ASV249	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; Vicinamibacteraceae; Luteitalea; NA
+ASV250	Bacteria; Chloroflexi; Ktedonobacteria; C0119; NA; NA; NA
+ASV251	Bacteria; Gemmatimonadota; Gemmatimonadetes; Gemmatimonadales; Gemmatimonadaceae; Gemmatimonas; NA
+ASV252	Bacteria; Proteobacteria; Gammaproteobacteria; CCD24; NA; NA; NA
+ASV253	Bacteria; Planctomycetota; Planctomycetes; Pirellulales; Pirellulaceae; NA; NA
+ASV254	Bacteria; Bacteroidota; Bacteroidia; Chitinophagales; Chitinophagaceae; Chitinophaga; ginsengihumi
+ASV255	Bacteria; Actinobacteriota; Actinobacteria; Streptomycetales; Streptomycetaceae; Streptomyces; clavuligerus
+ASV256	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV257	Bacteria; Proteobacteria; Alphaproteobacteria; Sphingomonadales; Sphingomonadaceae; Sphingomonas; wittichii
+ASV258	Bacteria; Armatimonadota; NA; NA; NA; NA; NA
+ASV259	Bacteria; Planctomycetota; Planctomycetes; Gemmatales; Gemmataceae; NA; NA
+ASV260	Bacteria; Chloroflexi; Anaerolineae; Anaerolineales; Anaerolineaceae; NA; NA
+ASV261	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Beijerinckiaceae; Methylobacterium-Methylorubrum; brachiatum
+ASV262	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Burkholderiaceae; Ralstonia; pickettii
+ASV263	Bacteria; Myxococcota; Polyangia; Polyangiales; Polyangiaceae; Aetherobacter; NA
+ASV264	Bacteria; Proteobacteria; Alphaproteobacteria; Sphingomonadales; Sphingomonadaceae; NA; NA
+ASV265	Bacteria; Acidobacteriota; Holophagae; Subgroup 7; NA; NA; NA
+ASV266	Bacteria; Myxococcota; Polyangia; Nannocystales; Nannocystaceae; Nannocystis; NA
+ASV267	Bacteria; Verrucomicrobiota; Verrucomicrobiae; Chthoniobacterales; Chthoniobacteraceae; Candidatus Udaeobacter; NA
+ASV268	Bacteria; Planctomycetota; Planctomycetes; Gemmatales; Gemmataceae; Gemmata; NA
+ASV269	Bacteria; Armatimonadota; Chthonomonadetes; Chthonomonadales; Chthonomonadaceae; Chthonomonas; NA
+ASV270	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV271	Bacteria; Actinobacteriota; Actinobacteria; Streptomycetales; Streptomycetaceae; Streptomyces; NA
+ASV272	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Beijerinckiaceae; Psychroglaciecola; NA
+ASV273	Bacteria; Planctomycetota; Phycisphaerae; Tepidisphaerales; WD2101 soil group; NA; NA
+ASV274	Bacteria; Planctomycetota; Planctomycetes; Pirellulales; Pirellulaceae; Pirellula; NA
+ASV275	Bacteria; Bacteroidota; Bacteroidia; Sphingobacteriales; Sphingobacteriaceae; Mucilaginibacter; NA
+ASV276	Bacteria; Acidobacteriota; Blastocatellia; Pyrinomonadales; Pyrinomonadaceae; RB41; NA
+ASV277	Bacteria; Actinobacteriota; Actinobacteria; Pseudonocardiales; Pseudonocardiaceae; Amycolatopsis; mediterranei
+ASV278	Bacteria; Acidobacteriota; Blastocatellia; Blastocatellales; Blastocatellaceae; OLB17; NA
+ASV279	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Oxalobacteraceae; Massilia; NA
+ASV280	Bacteria; Proteobacteria; Gammaproteobacteria; Pseudomonadales; Pseudomonadaceae; Pseudomonas; antarctica
+ASV281	Bacteria; Proteobacteria; Gammaproteobacteria; Pseudomonadales; Pseudomonadaceae; Pseudomonas; NA
+ASV282	Bacteria; Planctomycetota; Planctomycetes; Planctomycetales; NA; NA; NA
+ASV283	Bacteria; Proteobacteria; Gammaproteobacteria; Xanthomonadales; Rhodanobacteraceae; NA; NA
+ASV284	Bacteria; Planctomycetota; Phycisphaerae; Tepidisphaerales; WD2101 soil group; NA; NA
+ASV285	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Devosiaceae; Devosia; NA
+ASV286	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV287	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV288	Bacteria; Firmicutes; Limnochordia; Hydrogenispora; NA; NA; NA
+ASV289	Bacteria; Proteobacteria; Alphaproteobacteria; Sphingomonadales; Sphingomonadaceae; Sphingobium; herbicidovorans
+ASV290	Bacteria; Methylomirabilota; Methylomirabilia; Rokubacteriales; NA; NA; NA
+ASV291	Bacteria; Firmicutes; Bacilli; Bacillales; Planococcaceae; Sporosarcina; psychrophila
+ASV292	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Rhizobiaceae; Mesorhizobium; mediterraneum
+ASV293	Bacteria; Myxococcota; Polyangia; Haliangiales; Haliangiaceae; Haliangium; NA
+ASV294	Bacteria; Chloroflexi; Dehalococcoidia; S085; NA; NA; NA
+ASV295	Bacteria; Gemmatimonadota; Gemmatimonadetes; Gemmatimonadales; Gemmatimonadaceae; NA; NA
+ASV296	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Xanthobacteraceae; NA; NA
+ASV297	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; Vicinamibacteraceae; Vicinamibacter; NA
+ASV298	Bacteria; Planctomycetota; Planctomycetes; Pirellulales; Pirellulaceae; NA; NA
+ASV299	Bacteria; Methylomirabilota; Methylomirabilia; Rokubacteriales; WX65; NA; NA
+ASV300	Bacteria; Actinobacteriota; Actinobacteria; Micromonosporales; Micromonosporaceae; NA; NA
+ASV301	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Burkholderiaceae; Cupriavidus; necator
+ASV302	Bacteria; Chloroflexi; Ktedonobacteria; Ktedonobacterales; Ktedonobacteraceae; Ktedonobacter; NA
+ASV303	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; Vicinamibacteraceae; NA; NA
+ASV304	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; Vicinamibacteraceae; NA; NA
+ASV305	Bacteria; Bacteroidota; Bacteroidia; Chitinophagales; Chitinophagaceae; Chitinophaga; arvensicola
+ASV306	Bacteria; Proteobacteria; Alphaproteobacteria; NA; NA; NA; NA
+ASV307	Bacteria; Verrucomicrobiota; Verrucomicrobiae; Chthoniobacterales; Chthoniobacteraceae; Candidatus Udaeobacter; NA
+ASV308	Bacteria; Verrucomicrobiota; Verrucomicrobiae; Chthoniobacterales; Chthoniobacteraceae; Candidatus Udaeobacter; NA
+ASV309	Bacteria; Methylomirabilota; Methylomirabilia; Rokubacteriales; NA; NA; NA
+ASV310	Bacteria; Chloroflexi; Chloroflexia; Chloroflexales; Roseiflexaceae; NA; NA
+ASV311	Bacteria; Planctomycetota; Planctomycetes; Pirellulales; Pirellulaceae; Pirellula; NA
+ASV312	Bacteria; Actinobacteriota; Actinobacteria; Micromonosporales; Micromonosporaceae; Dactylosporangium; NA
+ASV313	Bacteria; Acidobacteriota; Holophagae; Subgroup 7; NA; NA; NA
+ASV314	Bacteria; Proteobacteria; Alphaproteobacteria; Azospirillales; NA; NA; NA
+ASV315	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Oxalobacteraceae; Massilia; putida
+ASV316	Bacteria; Chloroflexi; Ktedonobacteria; C0119; NA; NA; NA
+ASV317	Bacteria; Methylomirabilota; Methylomirabilia; Rokubacteriales; NA; NA; NA
+ASV318	Bacteria; Acidobacteriota; Subgroup 25; NA; NA; NA; NA
+ASV319	Bacteria; Firmicutes; Bacilli; Bacillales; Bacillaceae; Bacillus; circulans
+ASV320	Bacteria; Verrucomicrobiota; Verrucomicrobiae; Chthoniobacterales; Chthoniobacteraceae; Chthoniobacter; NA
+ASV321	Bacteria; Proteobacteria; Alphaproteobacteria; Reyranellales; Reyranellaceae; Reyranella; NA
+ASV322	Bacteria; Verrucomicrobiota; Verrucomicrobiae; Chthoniobacterales; Chthoniobacteraceae; NA; NA
+ASV323	Bacteria; Verrucomicrobiota; Verrucomicrobiae; Chthoniobacterales; Chthoniobacteraceae; NA; NA
+ASV324	Bacteria; Acidobacteriota; Blastocatellia; Pyrinomonadales; Pyrinomonadaceae; RB41; NA
+ASV325	Bacteria; Planctomycetota; Phycisphaerae; Tepidisphaerales; WD2101 soil group; NA; NA
+ASV326	Bacteria; Sumerlaeota; Sumerlaeia; Sumerlaeales; Sumerlaeaceae; Sumerlaea; NA
+ASV327	Bacteria; Verrucomicrobiota; Verrucomicrobiae; Chthoniobacterales; Chthoniobacteraceae; Chthoniobacter; NA
+ASV328	Bacteria; Acidobacteriota; Acidobacteriae; Acidobacteriales; NA; NA; NA
+ASV329	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV330	Bacteria; Chloroflexi; TK10; NA; NA; NA; NA
+ASV331	Bacteria; Planctomycetota; Planctomycetes; Gemmatales; Gemmataceae; NA; NA
+ASV332	Bacteria; Planctomycetota; Planctomycetes; Isosphaerales; Isosphaeraceae; Aquisphaera; NA
+ASV333	Bacteria; Acidobacteriota; Blastocatellia; 11-24; NA; NA; NA
+ASV334	Bacteria; Firmicutes; Bacilli; Bacillales; Bacillaceae; Bacillus; aryabhattai
+ASV335	Bacteria; Planctomycetota; Phycisphaerae; Tepidisphaerales; WD2101 soil group; NA; NA
+ASV336	Bacteria; Chloroflexi; Gitt-GS-136; NA; NA; NA; NA
+ASV337	Bacteria; Planctomycetota; Planctomycetes; Isosphaerales; Isosphaeraceae; Singulisphaera; NA
+ASV338	Bacteria; Planctomycetota; Planctomycetes; Pirellulales; Pirellulaceae; Pirellula; NA
+ASV339	Bacteria; Bacteroidota; Bacteroidia; Chitinophagales; Chitinophagaceae; Niastella; NA
+ASV340	Bacteria; Chloroflexi; Ktedonobacteria; C0119; NA; NA; NA
+ASV341	Bacteria; Proteobacteria; Alphaproteobacteria; Dongiales; Dongiaceae; Dongia; NA
+ASV342	Bacteria; Acidobacteriota; Vicinamibacteria; Subgroup 17; NA; NA; NA
+ASV343	Bacteria; Chloroflexi; Anaerolineae; Anaerolineales; Anaerolineaceae; NA; NA
+ASV344	Bacteria; Verrucomicrobiota; Verrucomicrobiae; Chthoniobacterales; Chthoniobacteraceae; Candidatus Udaeobacter; NA
+ASV345	Bacteria; Actinobacteriota; Thermoleophilia; Gaiellales; Gaiellaceae; Gaiella; NA
+ASV346	Bacteria; Planctomycetota; Planctomycetes; Isosphaerales; Isosphaeraceae; NA; NA
+ASV347	Bacteria; Actinobacteriota; Thermoleophilia; Gaiellales; NA; NA; NA
+ASV348	Bacteria; Actinobacteriota; Actinobacteria; Streptomycetales; Streptomycetaceae; Streptomyces; NA
+ASV349	Bacteria; Actinobacteriota; Actinobacteria; Glycomycetales; Glycomycetaceae; Glycomyces; harbinensis
+ASV350	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Xanthobacteraceae; NA; NA
+ASV351	Bacteria; Planctomycetota; Planctomycetes; Isosphaerales; Isosphaeraceae; Aquisphaera; NA
+ASV352	Bacteria; Planctomycetota; Planctomycetes; Gemmatales; Gemmataceae; NA; NA
+ASV353	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; Vicinamibacteraceae; Vicinamibacter; NA
+ASV354	Bacteria; Proteobacteria; Alphaproteobacteria; Elsterales; NA; NA; NA
+ASV355	Bacteria; Myxococcota; Myxococcia; Myxococcales; Myxococcaceae; Archangium; gephyra
+ASV356	Bacteria; Chloroflexi; KD4-96; NA; NA; NA; NA
+ASV357	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV358	Bacteria; Armatimonadota; NA; NA; NA; NA; NA
+ASV359	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV360	Bacteria; Proteobacteria; Alphaproteobacteria; Elsterales; NA; NA; NA
+ASV361	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV362	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; Vicinamibacteraceae; NA; NA
+ASV363	Bacteria; Actinobacteriota; Actinobacteria; Micrococcales; Micrococcaceae; Arthrobacter; NA
+ASV364	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV365	Bacteria; Verrucomicrobiota; Verrucomicrobiae; Pedosphaerales; Pedosphaeraceae; NA; NA
+ASV366	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV367	Bacteria; Actinobacteriota; Thermoleophilia; Gaiellales; NA; NA; NA
+ASV368	Bacteria; Proteobacteria; Alphaproteobacteria; Caulobacterales; Caulobacteraceae; Phenylobacterium; NA
+ASV369	Bacteria; Actinobacteriota; Actinobacteria; Micrococcales; Intrasporangiaceae; Oryzihumus; terrae
+ASV370	Bacteria; Acidobacteriota; Acidobacteriae; Acidobacteriales; Koribacteraceae; Candidatus Koribacter; NA
+ASV371	Bacteria; Planctomycetota; Planctomycetes; Pirellulales; Pirellulaceae; Pirellula; NA
+ASV372	Bacteria; Acidobacteriota; Blastocatellia; Blastocatellales; Blastocatellaceae; Tellurimicrobium; NA
+ASV373	Bacteria; Chloroflexi; Chloroflexia; Thermomicrobiales; JG30-KF-CM45; NA; NA
+ASV374	Bacteria; Proteobacteria; Gammaproteobacteria; Burkholderiales; Oxalobacteraceae; Pseudoduganella; NA
+ASV375	Bacteria; Methylomirabilota; Methylomirabilia; Rokubacteriales; WX65; NA; NA
+ASV376	Bacteria; Actinobacteriota; MB-A2-108; NA; NA; NA; NA
+ASV377	Bacteria; Bacteroidota; Bacteroidia; Sphingobacteriales; Sphingobacteriaceae; Mucilaginibacter; NA
+ASV378	Bacteria; Chloroflexi; Gitt-GS-136; NA; NA; NA; NA
+ASV379	Bacteria; Actinobacteriota; Actinobacteria; Catenulisporales; Catenulisporaceae; Catenulispora; acidiphila
+ASV380	Bacteria; Planctomycetota; Phycisphaerae; Tepidisphaerales; WD2101 soil group; NA; NA
+ASV381	Bacteria; Actinobacteriota; Thermoleophilia; Gaiellales; NA; NA; NA
+ASV382	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; NA; NA; NA
+ASV383	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Rhizobiaceae; Mesorhizobium; NA
+ASV384	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Beijerinckiaceae; Microvirga; ossetica
+ASV385	Bacteria; Acidobacteriota; Vicinamibacteria; Vicinamibacterales; Vicinamibacteraceae; NA; NA
+ASV386	Bacteria; Proteobacteria; Alphaproteobacteria; Sphingomonadales; Sphingomonadaceae; Sphingomonas; NA
+ASV387	Bacteria; Actinobacteriota; Actinobacteria; Propionibacteriales; Nocardioidaceae; Nocardioides; NA
+ASV388	Bacteria; Proteobacteria; Alphaproteobacteria; Elsterales; NA; NA; NA
+ASV389	Bacteria; Chloroflexi; Anaerolineae; Caldilineales; Caldilineaceae; NA; NA
